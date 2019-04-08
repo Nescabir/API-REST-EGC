@@ -1,5 +1,5 @@
 lexik_jwt_authentication:
-    secret_key: '/var/www/APIEGC/var/jwt/private.pem'
-    public_key: '/var/www/APIEGC/var/jwt/public.pem'
-    pass_phrase: 'apirestegc'
+    secret_key: '%kernel.project_dir%/var/jwt/private.pem'
+    public_key: '%kernel.project_dir%/var/jwt/public.pem'
+    pass_phrase: 'apirestegc' #879c8b51332de671a4944740d110f49d
     token_ttl: '3600'

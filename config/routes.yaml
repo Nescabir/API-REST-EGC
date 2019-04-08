@@ -2,3 +2,6 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
+swagger_ui:
+  path: /doc
+  controller: api_platform.swagger.action.ui
