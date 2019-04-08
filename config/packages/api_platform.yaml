@@ -9,7 +9,7 @@ api_platform:
             mime_types: ['text/html']
     title: 'API Escape Game Corp.'
     description: "Service web pour gerer les informations de EGC"
-    version: 'Beta 1.0'
+    version: '1.0.0'
     swagger:
         api_keys:
             apiKey:
