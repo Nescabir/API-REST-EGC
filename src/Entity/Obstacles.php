@@ -58,6 +58,13 @@ class Obstacles
      */
     private $typeobstacle;
 
+    /**
+     * @var int
+     *  
+     * @ORM\Column(name="difficulte", type="integer", nullable=false)
+     */
+    private $difficulte;
+
     public function getIdobstacle(): ?int
     {
         return $this->idobstacle;
@@ -71,6 +78,18 @@ class Obstacles
     public function setTypeobstacle(string $typeobstacle): self
     {
         $this->typeobstacle = $typeobstacle;
+
+        return $this;
+    }
+
+    public function getDifficulte(): ?int
+    {
+        return $this->difficulte;
+    }
+
+    public function setDifficulte(int $difficulte): self
+    {
+        $this->difficulte = $difficulte;
 
         return $this;
     }

@@ -45,6 +45,13 @@ class Salles
     private $theme;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="acces", type="string", length=255, nullable=false)
+     */
+    private $acces;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="statut", type="boolean", nullable=false)
@@ -76,6 +83,18 @@ class Salles
     public function setNomsalle(string $nomsalle): self
     {
         $this->nomsalle = $nomsalle;
+
+        return $this;
+    }
+
+    public function getAcces(): ?string
+    {
+        return $this->acces;
+    }
+
+    public function setAcces(string $acces): self
+    {
+        $this->acces = $acces;
 
         return $this;
     }
