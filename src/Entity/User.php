@@ -15,6 +15,8 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *     },
  *     itemOperations={
  *      "get",
+ *      "put",
+ *      "delete",
  *      "byUsername"={
  *          {"route_name"="byUsername"},
  *          "swagger_context" = {
@@ -50,6 +52,7 @@ class User extends BaseUser
   public function __contrust()
   {
     parent::__construct();
+    $this->enabled = true;
   }
 
   public function getId(): ?int

@@ -1,0 +1,3063 @@
+{
+    "swagger": "2.0",
+    "basePath": "\/",
+    "info": {
+        "title": "API Escape Game Corp.",
+        "version": "1.0.0",
+        "description": "Service web pour gerer les informations de EGC"
+    },
+    "paths": {
+        "\/associationpartieobstaclespositions": {
+            "get": {
+                "tags": [
+                    "Associationpartieobstaclesposition"
+                ],
+                "operationId": "getAssociationpartieobstaclespositionCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Associationpartieobstaclesposition resources.",
+                "responses": {
+                    "200": {
+                        "description": "Associationpartieobstaclesposition collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Associationpartieobstaclesposition"
+                ],
+                "operationId": "postAssociationpartieobstaclespositionCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Associationpartieobstaclesposition resource.",
+                "responses": {
+                    "201": {
+                        "description": "Associationpartieobstaclesposition resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "associationpartieobstaclesposition",
+                        "in": "body",
+                        "description": "The new Associationpartieobstaclesposition resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/associationpartieobstaclespositions\/{id}": {
+            "get": {
+                "tags": [
+                    "Associationpartieobstaclesposition"
+                ],
+                "operationId": "getAssociationpartieobstaclespositionItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Associationpartieobstaclesposition resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Associationpartieobstaclesposition resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Associationpartieobstaclesposition"
+                ],
+                "operationId": "deleteAssociationpartieobstaclespositionItem",
+                "summary": "Removes the Associationpartieobstaclesposition resource.",
+                "responses": {
+                    "204": {
+                        "description": "Associationpartieobstaclesposition resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Associationpartieobstaclesposition"
+                ],
+                "operationId": "putAssociationpartieobstaclespositionItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Associationpartieobstaclesposition resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "associationpartieobstaclesposition",
+                        "in": "body",
+                        "description": "The updated Associationpartieobstaclesposition resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Associationpartieobstaclesposition resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Associationpartieobstaclesposition"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/avis": {
+            "get": {
+                "tags": [
+                    "Avis"
+                ],
+                "operationId": "getAvisCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Avis resources.",
+                "responses": {
+                    "200": {
+                        "description": "Avis collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Avis"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Avis"
+                ],
+                "operationId": "postAvisCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Avis resource.",
+                "responses": {
+                    "201": {
+                        "description": "Avis resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Avis"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "avis",
+                        "in": "body",
+                        "description": "The new Avis resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Avis"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/avis\/BySalle\/{idsalle}": {
+            "get": {
+                "operationId": "getBySalleAvis",
+                "parameters": [
+                    {
+                        "name": "idsalle",
+                        "required": true,
+                        "type": "integer",
+                        "in": "path",
+                        "description": "Affiche les avis via l'id de la salle"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Avis"
+                ],
+                "summary": "Retrieves the collection of Avis resources.",
+                "responses": {
+                    "200": {
+                        "description": "Avis collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Avis"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/avis\/byPseudojoueur\/{pseudojoueur}": {
+            "get": {
+                "operationId": "getByPseudojoueurAvis",
+                "parameters": [
+                    {
+                        "name": "pseudojoueur",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Affiche les avis du joueur via son pseudo"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Avis"
+                ],
+                "summary": "Retrieves the collection of Avis resources.",
+                "responses": {
+                    "200": {
+                        "description": "Avis collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Avis"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/avis\/{id}": {
+            "get": {
+                "tags": [
+                    "Avis"
+                ],
+                "operationId": "getAvisItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Avis resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Avis resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Avis"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Avis"
+                ],
+                "operationId": "putAvisItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Avis resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "avis",
+                        "in": "body",
+                        "description": "The updated Avis resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Avis"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Avis resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Avis"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Avis"
+                ],
+                "operationId": "deleteAvisItem",
+                "summary": "Removes the Avis resource.",
+                "responses": {
+                    "204": {
+                        "description": "Avis resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/compte_archives": {
+            "get": {
+                "tags": [
+                    "CompteArchive"
+                ],
+                "operationId": "getCompteArchiveCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of CompteArchive resources.",
+                "responses": {
+                    "200": {
+                        "description": "CompteArchive collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/CompteArchive"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CompteArchive"
+                ],
+                "operationId": "postCompteArchiveCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a CompteArchive resource.",
+                "responses": {
+                    "201": {
+                        "description": "CompteArchive resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/CompteArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "compteArchive",
+                        "in": "body",
+                        "description": "The new CompteArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/CompteArchive"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/compte_archives\/{id}": {
+            "get": {
+                "tags": [
+                    "CompteArchive"
+                ],
+                "operationId": "getCompteArchiveItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a CompteArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CompteArchive resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/CompteArchive"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CompteArchive"
+                ],
+                "operationId": "deleteCompteArchiveItem",
+                "summary": "Removes the CompteArchive resource.",
+                "responses": {
+                    "204": {
+                        "description": "CompteArchive resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "CompteArchive"
+                ],
+                "operationId": "putCompteArchiveItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the CompteArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "compteArchive",
+                        "in": "body",
+                        "description": "The updated CompteArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/CompteArchive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CompteArchive resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/CompteArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/comptes": {
+            "get": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "getCompteCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Compte resources.",
+                "responses": {
+                    "200": {
+                        "description": "Compte collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Compte"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "postCompteCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Compte resource.",
+                "responses": {
+                    "201": {
+                        "description": "Compte resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "compte",
+                        "in": "body",
+                        "description": "The new Compte resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/comptes\/byPseudojoueur\/{pseudojoueur}": {
+            "get": {
+                "operationId": "getByPseudojoueur",
+                "parameters": [
+                    {
+                        "name": "pseudojoueur",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Affiche le compte du joueur via son pseudo"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Compte"
+                ],
+                "summary": "Retrieves a Compte resource.",
+                "responses": {
+                    "200": {
+                        "description": "Compte resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/comptes\/{id}": {
+            "get": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "getCompteItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Compte resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Compte resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "putCompteItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Compte resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "compte",
+                        "in": "body",
+                        "description": "The updated Compte resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Compte resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Compte"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "deleteCompteItem",
+                "summary": "Removes the Compte resource.",
+                "responses": {
+                    "204": {
+                        "description": "Compte resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/images_parties": {
+            "get": {
+                "tags": [
+                    "ImagesParties"
+                ],
+                "operationId": "getImagesPartiesCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of ImagesParties resources.",
+                "responses": {
+                    "200": {
+                        "description": "ImagesParties collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/ImagesParties"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "ImagesParties"
+                ],
+                "operationId": "postImagesPartiesCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a ImagesParties resource.",
+                "responses": {
+                    "201": {
+                        "description": "ImagesParties resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/ImagesParties"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "imagesParties",
+                        "in": "body",
+                        "description": "The new ImagesParties resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/ImagesParties"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/images_parties\/{id}": {
+            "get": {
+                "tags": [
+                    "ImagesParties"
+                ],
+                "operationId": "getImagesPartiesItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a ImagesParties resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ImagesParties resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/ImagesParties"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ImagesParties"
+                ],
+                "operationId": "deleteImagesPartiesItem",
+                "summary": "Removes the ImagesParties resource.",
+                "responses": {
+                    "204": {
+                        "description": "ImagesParties resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "ImagesParties"
+                ],
+                "operationId": "putImagesPartiesItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the ImagesParties resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "imagesParties",
+                        "in": "body",
+                        "description": "The updated ImagesParties resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/ImagesParties"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ImagesParties resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/ImagesParties"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/joueur_archives": {
+            "get": {
+                "tags": [
+                    "JoueurArchive"
+                ],
+                "operationId": "getJoueurArchiveCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of JoueurArchive resources.",
+                "responses": {
+                    "200": {
+                        "description": "JoueurArchive collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/JoueurArchive"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "JoueurArchive"
+                ],
+                "operationId": "postJoueurArchiveCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a JoueurArchive resource.",
+                "responses": {
+                    "201": {
+                        "description": "JoueurArchive resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/JoueurArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "joueurArchive",
+                        "in": "body",
+                        "description": "The new JoueurArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/JoueurArchive"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/joueur_archives\/{id}": {
+            "get": {
+                "tags": [
+                    "JoueurArchive"
+                ],
+                "operationId": "getJoueurArchiveItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a JoueurArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JoueurArchive resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/JoueurArchive"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "JoueurArchive"
+                ],
+                "operationId": "deleteJoueurArchiveItem",
+                "summary": "Removes the JoueurArchive resource.",
+                "responses": {
+                    "204": {
+                        "description": "JoueurArchive resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "JoueurArchive"
+                ],
+                "operationId": "putJoueurArchiveItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the JoueurArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "joueurArchive",
+                        "in": "body",
+                        "description": "The updated JoueurArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/JoueurArchive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JoueurArchive resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/JoueurArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/joueurs": {
+            "get": {
+                "tags": [
+                    "Joueur"
+                ],
+                "operationId": "getJoueurCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Joueur resources.",
+                "responses": {
+                    "200": {
+                        "description": "Joueur collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Joueur"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Joueur"
+                ],
+                "operationId": "postJoueurCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Joueur resource.",
+                "responses": {
+                    "201": {
+                        "description": "Joueur resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "joueur",
+                        "in": "body",
+                        "description": "The new Joueur resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/joueurs\/byIdjoueur\/{idjoueur}": {
+            "get": {
+                "operationId": "getByIdjoueur",
+                "parameters": [
+                    {
+                        "name": "idjoueur",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Id du joueur"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Joueur"
+                ],
+                "summary": "Retrieves a Joueur resource.",
+                "responses": {
+                    "200": {
+                        "description": "Joueur resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/joueurs\/byPseudo\/{pseudo}": {
+            "get": {
+                "operationId": "getByPseudo",
+                "parameters": [
+                    {
+                        "name": "pseudo",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Pseudo du joueur"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Joueur"
+                ],
+                "summary": "Retrieves a Joueur resource.",
+                "responses": {
+                    "200": {
+                        "description": "Joueur resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/joueurs\/{id}": {
+            "get": {
+                "tags": [
+                    "Joueur"
+                ],
+                "operationId": "getJoueurItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Joueur resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Joueur resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Joueur"
+                ],
+                "operationId": "putJoueurItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Joueur resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "joueur",
+                        "in": "body",
+                        "description": "The updated Joueur resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Joueur resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Joueur"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Joueur"
+                ],
+                "operationId": "deleteJoueurItem",
+                "summary": "Removes the Joueur resource.",
+                "responses": {
+                    "204": {
+                        "description": "Joueur resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/obstacles": {
+            "get": {
+                "tags": [
+                    "Obstacles"
+                ],
+                "operationId": "getObstaclesCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Obstacles resources.",
+                "responses": {
+                    "200": {
+                        "description": "Obstacles collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Obstacles"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Obstacles"
+                ],
+                "operationId": "postObstaclesCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Obstacles resource.",
+                "responses": {
+                    "201": {
+                        "description": "Obstacles resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Obstacles"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "obstacles",
+                        "in": "body",
+                        "description": "The new Obstacles resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Obstacles"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/obstacles\/byPartie\/{idPartie}": {
+            "get": {
+                "operationId": "getbyPartie",
+                "parameters": [
+                    {
+                        "name": "idPartie",
+                        "required": true,
+                        "type": "integer",
+                        "in": "path",
+                        "description": "Affiche les obstacles en fonction de la partie"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Obstacles"
+                ],
+                "summary": "Retrieves the collection of Obstacles resources.",
+                "responses": {
+                    "200": {
+                        "description": "Obstacles collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Obstacles"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/obstacles\/{id}": {
+            "get": {
+                "tags": [
+                    "Obstacles"
+                ],
+                "operationId": "getObstaclesItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Obstacles resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Obstacles resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Obstacles"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Obstacles"
+                ],
+                "operationId": "putObstaclesItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Obstacles resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "obstacles",
+                        "in": "body",
+                        "description": "The updated Obstacles resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Obstacles"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Obstacles resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Obstacles"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Obstacles"
+                ],
+                "operationId": "deleteObstaclesItem",
+                "summary": "Removes the Obstacles resource.",
+                "responses": {
+                    "204": {
+                        "description": "Obstacles resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/operation_archives": {
+            "get": {
+                "tags": [
+                    "OperationArchive"
+                ],
+                "operationId": "getOperationArchiveCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of OperationArchive resources.",
+                "responses": {
+                    "200": {
+                        "description": "OperationArchive collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/OperationArchive"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "OperationArchive"
+                ],
+                "operationId": "postOperationArchiveCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a OperationArchive resource.",
+                "responses": {
+                    "201": {
+                        "description": "OperationArchive resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/OperationArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "operationArchive",
+                        "in": "body",
+                        "description": "The new OperationArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/OperationArchive"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/operation_archives\/{id}": {
+            "get": {
+                "tags": [
+                    "OperationArchive"
+                ],
+                "operationId": "getOperationArchiveItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a OperationArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OperationArchive resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/OperationArchive"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "OperationArchive"
+                ],
+                "operationId": "deleteOperationArchiveItem",
+                "summary": "Removes the OperationArchive resource.",
+                "responses": {
+                    "204": {
+                        "description": "OperationArchive resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "OperationArchive"
+                ],
+                "operationId": "putOperationArchiveItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the OperationArchive resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "operationArchive",
+                        "in": "body",
+                        "description": "The updated OperationArchive resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/OperationArchive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OperationArchive resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/OperationArchive"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/operations": {
+            "get": {
+                "tags": [
+                    "Operations"
+                ],
+                "operationId": "getOperationsCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Operations resources.",
+                "responses": {
+                    "200": {
+                        "description": "Operations collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Operations"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Operations"
+                ],
+                "operationId": "postOperationsCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Operations resource.",
+                "responses": {
+                    "201": {
+                        "description": "Operations resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Operations"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "operations",
+                        "in": "body",
+                        "description": "The new Operations resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Operations"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/operations\/byDate\/{date}": {
+            "get": {
+                "operationId": "getOperationsByDate",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Affiche les op\u00e9rations par date"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Operations"
+                ],
+                "summary": "Retrieves the collection of Operations resources.",
+                "responses": {
+                    "200": {
+                        "description": "Operations collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Operations"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/byNumerocompte\/{numerocompte}": {
+            "get": {
+                "operationId": "getByNumerocompteJoueur",
+                "parameters": [
+                    {
+                        "name": "numerocompte",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Affiche les op\u00e9rations par compte"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Operations"
+                ],
+                "summary": "Retrieves the collection of Operations resources.",
+                "responses": {
+                    "200": {
+                        "description": "Operations collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Operations"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/{id}": {
+            "get": {
+                "tags": [
+                    "Operations"
+                ],
+                "operationId": "getOperationsItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Operations resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operations resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Operations"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Operations"
+                ],
+                "operationId": "putOperationsItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Operations resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "operations",
+                        "in": "body",
+                        "description": "The updated Operations resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Operations"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operations resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Operations"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Operations"
+                ],
+                "operationId": "deleteOperationsItem",
+                "summary": "Removes the Operations resource.",
+                "responses": {
+                    "204": {
+                        "description": "Operations resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/parties": {
+            "get": {
+                "tags": [
+                    "Parties"
+                ],
+                "operationId": "getPartiesCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Parties resources.",
+                "responses": {
+                    "200": {
+                        "description": "Parties collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Parties"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Parties"
+                ],
+                "operationId": "postPartiesCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Parties resource.",
+                "responses": {
+                    "201": {
+                        "description": "Parties resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Parties"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "parties",
+                        "in": "body",
+                        "description": "The new Parties resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Parties"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/parties\/byDate\/{date}": {
+            "get": {
+                "operationId": "getByDate",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Affiche les parties en fonction de la date"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Parties"
+                ],
+                "summary": "Retrieves the collection of Parties resources.",
+                "responses": {
+                    "200": {
+                        "description": "Parties collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Parties"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/parties\/byDate\/{date}\/{heure}": {
+            "get": {
+                "operationId": "getByDateEtHeure",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Date de la partie"
+                    },
+                    {
+                        "name": "heure",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "Heure de la partie"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Parties"
+                ],
+                "summary": "Retrieves the collection of Parties resources.",
+                "responses": {
+                    "200": {
+                        "description": "Parties collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Parties"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/parties\/byJoueur\/{joueur}": {
+            "get": {
+                "operationId": "getByJoueur",
+                "parameters": [
+                    {
+                        "name": "joueur",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "ID du joueur"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Parties"
+                ],
+                "summary": "Retrieves the collection of Parties resources.",
+                "responses": {
+                    "200": {
+                        "description": "Parties collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Parties"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/parties\/{id}": {
+            "get": {
+                "tags": [
+                    "Parties"
+                ],
+                "operationId": "getPartiesItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Parties resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Parties resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Parties"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Parties"
+                ],
+                "operationId": "putPartiesItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Parties resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "parties",
+                        "in": "body",
+                        "description": "The updated Parties resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Parties"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Parties resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Parties"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Parties"
+                ],
+                "operationId": "deletePartiesItem",
+                "summary": "Removes the Parties resource.",
+                "responses": {
+                    "204": {
+                        "description": "Parties resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "\/salles": {
+            "get": {
+                "tags": [
+                    "Salles"
+                ],
+                "operationId": "getSallesCollection",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves the collection of Salles resources.",
+                "responses": {
+                    "200": {
+                        "description": "Salles collection response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#\/definitions\/Salles"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "type": "integer"
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Salles"
+                ],
+                "operationId": "postSallesCollection",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Creates a Salles resource.",
+                "responses": {
+                    "201": {
+                        "description": "Salles resource created",
+                        "schema": {
+                            "$ref": "#\/definitions\/Salles"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "salles",
+                        "in": "body",
+                        "description": "The new Salles resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Salles"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/salles\/{id}": {
+            "get": {
+                "tags": [
+                    "Salles"
+                ],
+                "operationId": "getSallesItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a Salles resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Salles resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Salles"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Salles"
+                ],
+                "operationId": "deleteSallesItem",
+                "summary": "Removes the Salles resource.",
+                "responses": {
+                    "204": {
+                        "description": "Salles resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Salles"
+                ],
+                "operationId": "putSallesItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the Salles resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "salles",
+                        "in": "body",
+                        "description": "The updated Salles resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/Salles"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Salles resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/Salles"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/tokens\/log\/{username}\/{password}": {
+            "get": {
+                "operationId": "getToken",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "username of the user"
+                    },
+                    {
+                        "name": "password",
+                        "required": true,
+                        "type": "string",
+                        "in": "path",
+                        "description": "password of the user"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "Token"
+                ],
+                "summary": "Retrieves a Token resource.",
+                "responses": {
+                    "200": {
+                        "description": "Token resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/Token"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/users\/byUsername\/{username}": {
+            "get": {
+                "operationId": "getByUsername",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "required": true,
+                        "type": "string",
+                        "in": "path"
+                    }
+                ],
+                "produces": [
+                    "application\/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "Retrieves a User resource.",
+                "responses": {
+                    "200": {
+                        "description": "User resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/User"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        },
+        "\/users\/{id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "operationId": "getUserItem",
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Retrieves a User resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User resource response",
+                        "schema": {
+                            "$ref": "#\/definitions\/User"
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "operationId": "putUserItem",
+                "consumes": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "produces": [
+                    "application\/json",
+                    "text\/html"
+                ],
+                "summary": "Replaces the User resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "The updated User resource",
+                        "schema": {
+                            "$ref": "#\/definitions\/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User resource updated",
+                        "schema": {
+                            "$ref": "#\/definitions\/User"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "operationId": "deleteUserItem",
+                "summary": "Removes the User resource.",
+                "responses": {
+                    "204": {
+                        "description": "User resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "apiKey": {
+            "type": "apiKey",
+            "in": "header",
+            "description": "Value for the Authorization header",
+            "name": "Authorization"
+        }
+    },
+    "security": [
+        {
+            "apiKey": []
+        }
+    ],
+    "definitions": {
+        "Associationpartieobstaclesposition": {
+            "type": "object",
+            "description": "Associationpartieobstaclesposition",
+            "properties": {
+                "idposition": {
+                    "type": "integer"
+                },
+                "idpartie": {
+                    "type": "string"
+                },
+                "idobstacle": {
+                    "type": "string"
+                }
+            }
+        },
+        "Avis": {
+            "type": "object",
+            "description": "Avis",
+            "properties": {
+                "idavis": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "pseudojoueur": {
+                    "type": "string"
+                },
+                "contenu": {
+                    "type": "string"
+                },
+                "dateavis": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "nombreetoile": {
+                    "type": "integer"
+                },
+                "idjoueur": {
+                    "type": "string"
+                },
+                "idSalle": {
+                    "type": "string"
+                }
+            }
+        },
+        "Compte": {
+            "type": "object",
+            "description": "Compte",
+            "properties": {
+                "pseudojoueur": {
+                    "type": "string"
+                },
+                "numerocompte": {
+                    "type": "string"
+                },
+                "idcomptejoueur": {
+                    "type": "integer"
+                }
+            }
+        },
+        "CompteArchive": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "idcomptejoueur": {
+                    "type": "integer"
+                },
+                "pseudojoueur": {
+                    "type": "string"
+                },
+                "numerocompte": {
+                    "type": "string"
+                }
+            }
+        },
+        "ImagesParties": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "id": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "partie": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                }
+            }
+        },
+        "Joueur": {
+            "type": "object",
+            "description": "Joueur",
+            "properties": {
+                "idjoueur": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "pseudo": {
+                    "type": "string"
+                },
+                "motdepasse": {
+                    "type": "string"
+                },
+                "nom": {
+                    "type": "string"
+                },
+                "prenom": {
+                    "type": "string"
+                },
+                "datenaissance": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "datecreation": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "numerotelephone": {
+                    "type": "string"
+                },
+                "nombreparties": {
+                    "type": "integer"
+                }
+            }
+        },
+        "JoueurArchive": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "idjoueurarchive": {
+                    "type": "integer"
+                },
+                "pseudoarchive": {
+                    "type": "string"
+                },
+                "motdepassearchive": {
+                    "type": "string"
+                },
+                "nomarchive": {
+                    "type": "string"
+                },
+                "prenomarchive": {
+                    "type": "string"
+                },
+                "datenaissancearchive": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "datecreationarchive": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "numerotelephonearchive": {
+                    "type": "string"
+                },
+                "nombrepartiesarchive": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Obstacles": {
+            "type": "object",
+            "description": "Obstacles",
+            "properties": {
+                "idobstacle": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "typeobstacle": {
+                    "type": "string"
+                },
+                "difficulte": {
+                    "type": "integer"
+                }
+            }
+        },
+        "OperationArchive": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "idoperationarchive": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "nomoperation": {
+                    "type": "string"
+                },
+                "montant": {
+                    "type": "number"
+                },
+                "dateoperation": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "numerocompte": {
+                    "type": "string"
+                }
+            }
+        },
+        "Operations": {
+            "type": "object",
+            "description": "Operations",
+            "properties": {
+                "idoperation": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "nomoperation": {
+                    "type": "string"
+                },
+                "montant": {
+                    "type": "number"
+                },
+                "dateoperation": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "numerocompte": {
+                    "type": "string"
+                },
+                "idcomptejoueur": {
+                    "type": "string"
+                }
+            }
+        },
+        "Parties": {
+            "type": "object",
+            "description": "Parties",
+            "properties": {
+                "idpartie": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "dateheuredebutpartie": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "dateheurefinpartie": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "nombrejoueur": {
+                    "type": "integer"
+                },
+                "nombreobstacles": {
+                    "type": "integer"
+                },
+                "idjoueurpartie": {
+                    "type": "string"
+                },
+                "idsalle": {
+                    "type": "string"
+                }
+            }
+        },
+        "Salles": {
+            "type": "object",
+            "description": "Salles",
+            "properties": {
+                "idsalle": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "ville": {
+                    "type": "string"
+                },
+                "nomsalle": {
+                    "type": "string"
+                },
+                "acces": {
+                    "type": "string"
+                },
+                "theme": {
+                    "type": "string"
+                },
+                "statut": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Token": {
+            "type": "object",
+            "description": "",
+            "properties": {
+                "token": {
+                    "type": "string"
+                }
+            }
+        },
+        "User": {
+            "type": "object",
+            "description": "User",
+            "properties": {
+                "id": {
+                    "readOnly": true,
+                    "type": "integer"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "username": {
+                    "type": "string"
+                },
+                "usernameCanonical": {
+                    "type": "string"
+                },
+                "salt": {
+                    "description": "The salt to use for hashing.",
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "emailCanonical": {
+                    "type": "string"
+                },
+                "password": {
+                    "description": "Encrypted password. Must be persisted.",
+                    "type": "string"
+                },
+                "plainPassword": {
+                    "description": "Plain password. Used for model validation. Must not be persisted.",
+                    "type": "string"
+                },
+                "lastLogin": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "confirmationToken": {
+                    "description": "Random string sent to the user email address in order to verify it.",
+                    "type": "string"
+                },
+                "role": {
+                    "description": "{@inheritdoc}"
+                },
+                "accountNonExpired": {
+                    "readOnly": true,
+                    "description": "{@inheritdoc}",
+                    "type": "boolean"
+                },
+                "accountNonLocked": {
+                    "readOnly": true,
+                    "description": "{@inheritdoc}",
+                    "type": "boolean"
+                },
+                "credentialsNonExpired": {
+                    "readOnly": true,
+                    "description": "{@inheritdoc}",
+                    "type": "boolean"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "superAdmin": {
+                    "description": "{@inheritdoc}",
+                    "type": "boolean"
+                },
+                "passwordRequestedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "passwordRequestNonExpired": {
+                    "readOnly": true,
+                    "description": "{@inheritdoc}"
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "groupNames": {
+                    "readOnly": true,
+                    "description": "{@inheritdoc}"
+                },
+                "group": {
+                    "description": "{@inheritdoc}",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

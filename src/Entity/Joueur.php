@@ -116,6 +116,13 @@ class Joueur
      * @ORM\Column(name="nombreParties", type="integer", nullable=false, options={"default" : 0})
      */
     private $nombreparties;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motdepasse", type="string", length=255, nullable=false)
+     */
+    private $motdepasse;
 
     public function getIdjoueur(): ?int
     {
@@ -130,6 +137,18 @@ class Joueur
     public function setPseudo(string $pseudo): self
     {
         $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getMotdepasse(): ?string
+    {
+        return $this->motdepasse;
+    }
+
+    public function setMotdepasse(string $motdepasse): self
+    {
+        $this->motdepasse = $motdepasse;
 
         return $this;
     }

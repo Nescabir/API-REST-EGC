@@ -43,4 +43,58 @@ class PartiesController extends Controller
 
         return JsonResponse::fromJsonString($serializer->serialize($parties,"json"));
     }
+
+    /**
+     * @Route(
+     *     name="byJoueur",
+     *     path="/parties/byJoueur/{joueur}",
+     *     methods="GET",
+     *     defaults={
+     *      "_api_resource_class"=Parties::class,
+     *     }
+     * )
+     *
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function ByIdjoueurAction(Request $request){
+
+        $tab = explode("/",$request->getPathInfo());
+        //     $em = $this->getDoctrine()->getManager();
+        // $entitie = $em ->getRepository("App\Entity\Parties")->findPartiesByDate($tab[3]);
+        //
+        $serializer = $this->get("serializer");
+        // return JsonResponse::fromJsonString($serializer->serialize($entitie,"json"));
+        $parties = $this->getDoctrine()
+            ->getRepository(Parties::class)
+            ->findPartiesByIdjoueur($tab[3]);
+
+        return JsonResponse::fromJsonString($serializer->serialize($parties,"json"));
+    }
+
+    /**
+     * @Route(
+     *     name="byDateEtHeure",
+     *     path="/parties/byDate/{date}/{heure}",
+     *     methods="GET",
+     *     defaults={
+     *      "_api_resource_class"=Parties::class,
+     *     }
+     * )
+     *
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function ByDateEtHeureAction(Request $request){
+
+        $tab = explode("/",$request->getPathInfo());
+        //     $em = $this->getDoctrine()->getManager();
+        // $entitie = $em ->getRepository("App\Entity\Parties")->findPartiesByDate($tab[3]);
+        //
+        $serializer = $this->get("serializer");
+        // return JsonResponse::fromJsonString($serializer->serialize($entitie,"json"));
+        $parties = $this->getDoctrine()
+            ->getRepository(Parties::class)
+            ->findPartiesByDateEtHeure($tab[3], $tab[4]);
+
+        return JsonResponse::fromJsonString($serializer->serialize($parties,"json"));
+    }
 }

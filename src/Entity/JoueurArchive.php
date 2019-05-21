@@ -68,6 +68,12 @@ class JoueurArchive
      */
     private $nombrepartiesarchive;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motdepassearchive", type="string", length=255, nullable=false)
+     */
+    private $motdepassearchive;
 
     public function getIdjoueurarchive(): ?int
     {
@@ -92,6 +98,17 @@ class JoueurArchive
         return $this;
     }
 
+    public function getMotdepassearchive(): ?string
+    {
+        return $this->motdepassearchive;
+    }
+
+    public function setMotdepassearchive(string $motdepassearchive): self
+    {
+        $this->motdepassearchive = $motdepassearchive;
+
+        return $this;
+    }
     public function getNomarchive(): ?string
     {
         return $this->nomarchive;

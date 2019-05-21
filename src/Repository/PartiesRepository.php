@@ -38,6 +38,32 @@ class PartiesRepository extends EntityRepository
             ->getResult();
     }
 
+    /**
+     * @return Parties[]
+     *
+     */
+    public function findPartiesByDateEtHeure($date, $heure)
+    {
+        $sql = "SELECT p FROM App\Entity\Parties p WHERE p.dateheuredebutpartie LIKE '".$date." ".$heure."%'";
+
+        return $this->getEntityManager()
+            ->createQuery($sql)
+            ->getResult();
+    }
+
+    /**
+     * @return Parties[]
+     *
+     */
+    public function findPartiesByIdjoueur($joueur)
+    {
+        $sql = "SELECT p FROM App\Entity\Parties p WHERE p.idjoueurpartie = '".$joueur."'";
+
+        return $this->getEntityManager()
+            ->createQuery($sql)
+            ->getResult();
+    }
+
     // public function findByPartie($idPartie)
     // {
     //     $sql = "select typeObstacle from Obstacles join associationpartieobstaclesposition on Obstacles.idObstacle=associationpartieobstaclesposition.idObstacle join Parties on Parties.idPartie=associationpartieobstaclesposition.idPartie where Parties.idPartie=:IdPartie";

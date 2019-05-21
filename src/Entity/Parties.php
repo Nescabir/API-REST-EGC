@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiProperty;
@@ -24,6 +26,49 @@ use ApiPlatform\Core\Annotation\ApiProperty;
  *                      "type" = "string",
  *                      "in" = "path",
  *                      "description" = "Affiche les parties en fonction de la date"
+ *                  }
+ *              },
+ *              "produces" = {
+ *                 "application/json"
+ *               }
+ *          }
+ *      },
+ *      "byJoueur"={
+ *          {"route_name"="byJoueur"},
+ *          "swagger_context" = {
+ *              "operationId"="getByJoueur",
+ *              "parameters" = {
+ *                  {
+ *                      "name" = "joueur",
+ *                      "required" = true,
+ *                      "type" = "string",
+ *                      "in" = "path",
+ *                      "description" = "ID du joueur"
+ *                  }
+ *              },
+ *              "produces" = {
+ *                 "application/json"
+ *               }
+ *          }
+ *      },
+ *      "byDateEtHeure"={
+ *          {"route_name"="byDateEtHeure"},
+ *          "swagger_context" = {
+ *              "operationId"="getByDateEtHeure",
+ *              "parameters" = {
+ *                  {
+ *                      "name" = "date",
+ *                      "required" = true,
+ *                      "type" = "string",
+ *                      "in" = "path",
+ *                      "description" = "Date de la partie"
+ *                  },
+ *                  {
+ *                      "name" = "heure",
+ *                      "required" = true,
+ *                      "type" = "string",
+ *                      "in" = "path",
+ *                      "description" = "Heure de la partie"
  *                  }
  *              },
  *              "produces" = {
@@ -177,5 +222,4 @@ class Parties
 
         return $this;
     }
-
 }
